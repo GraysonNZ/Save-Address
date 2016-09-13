@@ -32,7 +32,7 @@ $sql_addresses= "CREATE TABLE [dbo].[sa_addresses]
     [city] VARCHAR(50) NULL,
     [country] VARCHAR(50) NULL
 )";
-sqlsrv_query($conn,$sql_login)){
+if(sqlsrv_query($conn,$sql_login)){
   if(sqlsrv_query($conn,$sql_user_detail)){
     if(sqlsrv_query($conn,$sql_addresses)){
       header('location: index.php');
