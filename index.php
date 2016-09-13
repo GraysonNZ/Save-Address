@@ -1,12 +1,8 @@
 <?php
 require_once('config.php');
+require_once('session.php');
 if (!isset($conn)){
-  header("location: setup.php");
+  header("Location: setup.php");
 }
-else{
-  include('header.php');
-
-}
-
-
+include('header.php');
 ?>

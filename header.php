@@ -11,7 +11,8 @@
 <head>
 <title>Save Address</title>
 <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="../bootstrap/dist/js/bootstrap.min.js"/>
+<script src="../bootstrap/dist/js/bootstrap.min.js">
+</script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
