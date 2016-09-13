@@ -33,23 +33,11 @@ $sql_addresses= "CREATE TABLE [dbo].[sa_addresses]
     [country] VARCHAR(50) NULL
 )
 "
-if(sqlsrv_query($conn,$sql_login)){
-  if(sqlsrv_query($conn,$sql_user_detail)){
-    if(sqlsrv_query($conn,$sql_addresses)){
+sqlsrv_query($conn,$sql_login);
+  sqlsrv_query($conn,$sql_user_detail);
+    sqlsrv_query($conn,$sql_addresses);
       header('location: index.php');
-    }
-    else{
-        die("Addresses Database creation Failed");
-    }
 
-  }
-  else{
-      die("User Details Database creation Failed");
-  }
-}
-else {
-  die("Login Database creation Failed");
-}
 
 
   ?>
