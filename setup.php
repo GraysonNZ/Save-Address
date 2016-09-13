@@ -17,7 +17,7 @@
 				$conn = sqlsrv_connect($serverName, $connectionInfo);
 				?>');
 				fclose($fp);
-				header('location: create_table.php')
+				header('location: create_table.php');
         }
         else {
           $message="Please fill all the fields";
