@@ -3,14 +3,14 @@
  $sql_login="CREATE TABLE [dbo].[sa_login]
 (
 	[user_id] INT NOT NULL PRIMARY KEY IDENTITY,
-    [user_name] VARCHAR(50) NOT NULL,
+    [user_name] VARCHAR(50) NOT NULL UNIQUE,
     [user_pass] VARCHAR(50) NOT NULL,
     [email] VARCHAR(MAX) NULL
 )";
 
 $sql_user_detail="CREATE TABLE [dbo].[sa_user_details]
 (
-	[user_id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[user_id] INT NOT NULL PRIMARY KEY,
     [f_name] VARCHAR(50) NOT NULL,
     [l_name] VARCHAR(50) NOT NULL,
     [mobile] BIGINT NULL,

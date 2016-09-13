@@ -5,7 +5,7 @@
     header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
     exit();
 }
-//   require_once('session.php');
+require_once('session.php');
  ?>
 <!DOCTYPE html>
 <head>
