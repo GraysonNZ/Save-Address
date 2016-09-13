@@ -1,6 +1,6 @@
 <?php
-include ('config.php');
-if ($connectionInfo["UID"]== "" || $connectionInfo["pwd"]=="" || $connectionInfo["database"] = "" || $serverName=""){
+require_once('config.php');
+if (!isset($conn)){
   header("location: setup.php");
 }
 else{

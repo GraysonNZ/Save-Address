@@ -1,6 +1,6 @@
 <?php
 
-	include('config.php');
+	require_once('config.php');
 
 	 if($_SERVER["REQUEST_METHOD"]== "POST"){
 
@@ -9,11 +9,14 @@
       	$pwd =$_POST['password'];
 	  	  $database=$_POST['database'];
         $server=$_POST['servername'];
-        isset($uid && $pwd && $database && $server){
-          $connectioninfo["UID"]=$uid;
-          $connectioninfo["pwd"]=$pwd;
-          $connectioninfo["database"]=$database;
-          $serverName=$server;
+				if (isset($uid || $pwd || $database || $server )){
+				$fp=fopen('config.php','w');
+				fwrite($fp, '<?php
+				$connectionInfo = array("UID" => '.$uid.', "pwd" => '. $pwd. ', "Database" => '.$database.', "" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+				$serverName = '.$server.';
+				$conn = sqlsrv_connect($serverName, $connectionInfo);
+				?>');
+				fclose($fp);
         }
         else {
           $message="Please fill all the fields";
