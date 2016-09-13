@@ -13,7 +13,7 @@
 				$fp=fopen('config.php','w');
 				fwrite($fp, '<?php
 				$connectionInfo = array("UID" => "'.$uid.'", "pwd" => "'. $pwd. '", "Database" => "'.$database.'", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-				$serverName = '.$server.';
+				$serverName = "'.$server.'";
 				$conn = sqlsrv_connect($serverName, $connectionInfo);
 				?>');
 				fclose($fp);
