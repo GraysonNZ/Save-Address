@@ -11,7 +11,7 @@
     $row = sqlsrv_fetch_array($ses_sql,SQLSRV_FETCH_ASSOC);
    }
    else{
-     die "User Not found";
+     die ("User Not found");
    }
 
    $login_session = $row['user_name'];

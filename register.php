@@ -1,6 +1,7 @@
 <?php
 
-	include('session.php');
+	//include('session.php');
+  require_once('config.php');
 
 	 if($_SERVER["REQUEST_METHOD"]== "POST"){
 
@@ -14,12 +15,10 @@
 	  	$date = date('Y/m/d H:i:s');
 
 	  	if ( $password == $confirmation_password ) {
-        $id_check =  sqlsrv_query($conn,"SELECT user_id FROM sa_login WHERE user_name= '".$username."'");
-        if (sqlsrv_fetch_array($result,SQLSRV_FETCH_ASSOC) == null){
-          $msg_type=1;
-          $message="Username already exists. Please try again with different username";
-        }
-        else {
+        
+
+
+
 
 			       $sql = "INSERT INTO sa_login (user_name, user_pass, email) VALUES ('".$username."', '".$password."', '".$email."' )";
 
@@ -50,7 +49,7 @@
 			  $message=" Registration Failed . An error Occured.";
 		  	}
 
-	  	}
+
     }
 	  	else {
 		   $msg_type= 0;
@@ -63,10 +62,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Registration|CarpoolNZ</title>
-<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'/>
-<link rel="stylesheet" type="text/css" href="style.css">
-
+<title>Registration|Save Address</title>
+<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script src="../bootstrap/dist/js/bootstrap.min.js">
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container">
