@@ -18,14 +18,7 @@
               </div>
                </div>
                  </div>
-              <div class="row">
-                     <div class="col-md-3 col-sm-3 col-xs-3">
-              <div class= "form-group">
-                         <input type="text" name ="input_destination" class="form-control input-sm"
-                         id ="input_destination" placeholder="Enter a destination location">
-               </div>
-                </div>
-                 </div>
+            
                  <div class="row">
                      <div class="col-md-3 col-sm-3 col-xs-3">
                    <div class= "form-group">
@@ -64,7 +57,7 @@
 
 
        </script>
-       <script src = "../typecript.ts"></script>
+       <script src = "../typescript.ts"></script>
        <script>
        function ButtonClick(){
          var streetNum = document.getElementByName('street_number').value;
@@ -75,6 +68,7 @@
 
         var fullAddress= new FullAddress(streetNum, streetAdd , sub, city, country);
         console.log( getFullAddress());
+
       }
        </script>
          </body>
