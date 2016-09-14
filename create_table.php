@@ -10,7 +10,8 @@
 
 $sql_user_detail="CREATE TABLE [dbo].[sa_user_details]
 (
-	[user_id] INT NOT NULL PRIMARY KEY,
+	[detail_id] INT NOT NULL PRIMARY KEY IDENTITY,
+  [user_id] INT NOT NULL UNIQUE,
     [f_name] VARCHAR(50) NOT NULL,
     [l_name] VARCHAR(50) NOT NULL,
     [mobile] BIGINT NULL,

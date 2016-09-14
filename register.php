@@ -15,7 +15,7 @@
 	  	$date = date('Y/m/d H:i:s');
 
 	  	if ( $password == $confirmation_password ) {
-        
+
 
 
 
@@ -28,9 +28,9 @@
 
       		  	         $row = sqlsrv_fetch_array($result,SQLSRV_FETCH_ASSOC);
 	          	           $userID = $row['user_id'];
-			  	                   $sql = "INSERT INTO user_details (user_id, f_name, l_name) VALUES ('".$userID."' , '" .$fname."', '".$lname."' )";
+			  	                   $sql1 = "INSERT INTO user_details (user_id, f_name, l_name) VALUES ('".$userID."' , '" .$fname."', '".$lname."' )";
 
-				if ( sqlsrv_query($conn,$sql) ){
+				if ( sqlsrv_query($conn,$sql1) ){
 				  	$msg_type= 1;
 				  	$message=" You have registered successfully. ";
 
@@ -40,7 +40,7 @@
 				  $msg_type= 0;
 				  $message=" Registration Failed . An error Occured.";
 
-			  	}
+        }
 		  	}
 
 
