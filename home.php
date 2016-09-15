@@ -17,6 +17,7 @@ include ('header.php'); ?>
                  var City= document.getElementByName('administrative_area_level_1').value;
                  var Country= document.getElementByName('country').value;
                  var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
+                 console.log("The address of " + name + " is " +  getAddress.fullAddress());
 
                  document.getElementById('message_area').innerHTML ="The address of " + name + " is " +  getAddress.fullAddress();
                   return false;
