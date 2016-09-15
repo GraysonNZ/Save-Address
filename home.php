@@ -19,7 +19,7 @@ include ('header.php'); ?>
                  var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
 
                  document.getElementById('message_area').innerHTML ="The address of " + name + " is " +  getAddress.fullAddress();
-
+                  return false;
               }
                </script>
          </head>
@@ -46,13 +46,13 @@ include ('header.php'); ?>
               </div>
 
                    <div class= "form-group">
-                         <input type="button" onclick="ButtonClick()" value ="Create Address"
+                         <input type="button" name="button" onclick="ButtonClick()" value ="Save Address"
                          class="btn btn-info btn-block">
                    </div>
 
 
                  <div id= "message_area">
-                   <p> Note: This database will not save to the database. The feature will arrive soon. (This page is using google maps places api, typescript and bootstrap) </p>
+                   <p> Note: This database will not save to the database. The database server is currently inactive. (This page is using google maps places api, typescript and bootstrap) </p>
                  </div>
          </form>
        </div>
