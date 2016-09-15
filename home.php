@@ -5,6 +5,20 @@
    <title>Home </title>
              <link rel='stylesheet' type='text/css' href='../bootstrap/dist/css/bootstrap.min.css'/>
                <link rel="stylesheet" type="text/css" href="../style.css">
+               <script src = "../typescript.js"></script>
+               <script>
+               function ButtonClick(){
+                 var streetNum = document.getElementByName('street_number').value;
+                 var streetAdd = document.getElementByName('route').value;
+                 var sub= document.getElementByName('sublocality').value;
+                 var City= document.getElementByName('administrative_area_level_1').value;
+                 var Country= document.getElementByName('country').value;
+                 var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
+                 console.log(getAddress);
+                 document.body.innerHTML = getAddress.fullAddress();
+
+              }
+               </script>
          </head>
 
          <body>
@@ -33,14 +47,16 @@
        <div id="data" >
        <form>
            <fieldset>
-       <input type= "hidden" name="lat">
-       <input type= "hidden" name="lng">
-       <input type= "hidden" name="street_number">
-       <input type= "hidden" name="route">
-       <input type= "hidden" name="sublocality">
-       <input type= "hidden" name="administrative_area_level_1">
-       <input type= "hidden" name="postal_code">
-       <input type= "hidden" name="country">
+       <input type= "text" name="lat">
+       <input type= "text" name="lng">
+       <input type= "text" name="street_number">
+       <input type= "text" name="route">
+       <input type= "text" name="sublocality">
+       <input type= "text" name="administrative_area_level_1">
+       <input type= "text" name="postal_code">
+       <input type= "text" name="country">
+       <input type="submit" onclick="ButtonClick()" value ="Create Journey"
+       class="btn btn-info btn-block">
            </fieldset>
        </form>
        </div>
