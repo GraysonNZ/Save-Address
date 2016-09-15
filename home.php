@@ -17,7 +17,7 @@ include ('header.php'); ?>
                  var City= document.getElementByName('administrative_area_level_1').value;
                  var Country= document.getElementByName('country').value;
                  var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
-                 console.log(getAddress);
+
                  document.getElementById('message_area').innerHTML ="The address of " + name + " is " +  getAddress.fullAddress();
 
               }
@@ -33,33 +33,24 @@ include ('header.php'); ?>
 			    		<h3 class="panel-title">Please Enter Person Name and Address Below <small>Try it!</small></h3>
 			 			</div>
              <div class = "panel-body">
-         <form id= "create_journey" role= "form">
-           <div class="row">
-                   <div class="col-md-3 col-sm-3 col-xs-3">
+         <form id= "generate_address" role= "form">
+
            <div class= "form-group">
                        <input type="text" name ="person_name" class="form-control input-sm"
                        id ="person_name" placeholder="Full name of person">
             </div>
-             </div>
-           </div>
-             <div class="row">
-                     <div class="col-md-3 col-sm-3 col-xs-3">
+
              <div class= "form-group">
                          <input type="text" name ="geocomplete" class="form-control input-sm"
                          id ="geocomplete" placeholder="Enter the address">
               </div>
-               </div>
-                 </div>
 
-                 <div class="row">
-                     <div class="col-md-3 col-sm-3 col-xs-3">
                    <div class= "form-group">
                          <input type="button" onclick="ButtonClick()" value ="Create Address"
                          class="btn btn-info btn-block">
                    </div>
 
-                   </div>
-                 </div>
+
                  <div id= "message_area">
                    <p> Note: This database will not save to the database. The feature will arrive soon. (This page is using google maps places api, typescript and bootstrap) </p>
                  </div>
