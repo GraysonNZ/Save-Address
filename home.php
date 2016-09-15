@@ -10,6 +10,7 @@ include ('header.php'); ?>
                <script src = "../typescript.js"></script>
                <script>
                function ButtonClick(){
+                 var name= document.getElementById('person_name').value;
                  var streetNum = document.getElementByName('street_number').value;
                  var streetAdd = document.getElementByName('route').value;
                  var sub= document.getElementByName('sublocality').value;
@@ -17,20 +18,35 @@ include ('header.php'); ?>
                  var Country= document.getElementByName('country').value;
                  var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
                  console.log(getAddress);
-                 document.body.innerHTML = getAddress.fullAddress();
+                 document.getElementById('message_area').innerHTML ="The address of " + name + " is " +  getAddress.fullAddress();
 
               }
                </script>
          </head>
 
          <body>
+           <div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Please Enter Person Name and Address Below <small>Try it!</small></h3>
+			 			</div>
              <div class = "panel-body">
          <form id= "create_journey" role= "form">
+           <div class="row">
+                   <div class="col-md-3 col-sm-3 col-xs-3">
+           <div class= "form-group">
+                       <input type="text" name ="person_name" class="form-control input-sm"
+                       id ="person_name" placeholder="Full name of person">
+            </div>
+             </div>
+           </div>
              <div class="row">
                      <div class="col-md-3 col-sm-3 col-xs-3">
              <div class= "form-group">
                          <input type="text" name ="geocomplete" class="form-control input-sm"
-                         id ="geocomplete" placeholder="Enter an origin location">
+                         id ="geocomplete" placeholder="Enter the address">
               </div>
                </div>
                  </div>
@@ -44,8 +60,16 @@ include ('header.php'); ?>
 
                    </div>
                  </div>
+                 <div id= "message_area">
+                   <p> Note: This database will not save to the database. The feature will arrive soon. (This page is using google maps places api, typescript and bootstrap) </p>
+                 </div>
          </form>
        </div>
+     </div>
+   </div>
+ </div>
+ </div>
+
        <div id="data" >
        <form>
            <fieldset>
