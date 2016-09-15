@@ -92,17 +92,5 @@ include ('header.php'); ?>
 
 
        </script>
-       <script src = "../typescript.js"></script>
-       <script>
-       function ButtonClick(){
-         var streetNum = document.getElementById('street_number').value;
-         var streetAdd = document.getElementById('route').value;
-         var sub= document.getElementById('sublocality').value;
-         var City= document.getElementById('administrative_area_level_1').value;
-         var Country= document.getElementById('country').value;
-         var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
-         document.body.innerHTML = getAddress.fullAddress();
-
-      }
-       </script>
+       
          </body>
