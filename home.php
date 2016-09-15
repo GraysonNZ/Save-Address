@@ -11,11 +11,11 @@ include ('header.php'); ?>
                <script>
                function ButtonClick(){
                  var name= document.getElementById('person_name').value;
-                 var streetNum = document.getElementByName('street_number').value;
-                 var streetAdd = document.getElementByName('route').value;
-                 var sub= document.getElementByName('sublocality').value;
-                 var City= document.getElementByName('administrative_area_level_1').value;
-                 var Country= document.getElementByName('country').value;
+                 var streetNum = document.getElementById('street_number').value;
+                 var streetAdd = document.getElementById('route').value;
+                 var sub= document.getElementById('sublocality').value;
+                 var City= document.getElementById('administrative_area_level_1').value;
+                 var Country= document.getElementById('country').value;
                  var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
 
 
@@ -92,5 +92,5 @@ include ('header.php'); ?>
 
 
        </script>
-       
+
          </body>
