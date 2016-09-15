@@ -5,6 +5,6 @@ class GetAddress {
     }
 
       fullAddress(){
-        return "The address is : " + this.streetNumber + " " + this.StreetName + ", " + this.suburb + ", " + this.city + ", " + this.country;
+        return  this.streetNumber + " " + this.StreetName + ", " + this.suburb + ", " + this.city + ", " + this.country;
       }
 };
