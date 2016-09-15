@@ -46,17 +46,19 @@ include ('header.php'); ?>
                          id ="geocomplete" placeholder="Enter the address">
               </div>
 
-                   <div class= "form-group">
-                         <input type="button" name="button" onclick="ButtonClick()" value ="Save Address"
-                         class="btn btn-info btn-block">
-                   </div>
 
 
-                 <div id= "message_area"> </div>
-                 <div id= "note">
-                   <p> Note: This database will not save to the database. The database server is currently inactive. (This page is using google maps places api, typescript and bootstrap) </p>
-                 </div>
+
          </form>
+         <div class= "form-group">
+               <input type="button" name="button" onclick="ButtonClick()" value ="Save Address"
+               class="btn btn-info btn-block">
+         </div>
+         <div id= "message_area"> </div>
+         <div id= "note">
+           <p> Note: This database will not save to the database. The database server is currently inactive. (This page is using google maps places api, typescript and bootstrap) </p>
+         </div>
+
        </div>
      </div>
    </div>
