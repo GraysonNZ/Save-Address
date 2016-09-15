@@ -38,7 +38,7 @@ include ('header.php'); ?>
                  <div class="row">
                      <div class="col-md-3 col-sm-3 col-xs-3">
                    <div class= "form-group">
-                         <input type="submit" onclick="ButtonClick()" value ="Create Journey"
+                         <input type="button" onclick="ButtonClick()" value ="Create Address"
                          class="btn btn-info btn-block">
                    </div>
 
