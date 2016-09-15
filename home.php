@@ -34,7 +34,7 @@ include ('header.php'); ?>
 			    		<h3 class="panel-title">Please Enter Person Name and Address Below <small>Try it!</small></h3>
 			 			</div>
              <div class = "panel-body">
-         <form id= "generate_address" role= "form">
+
 
            <div class= "form-group">
                        <input type="text" name ="person_name" class="form-control input-sm"
@@ -52,10 +52,11 @@ include ('header.php'); ?>
                    </div>
 
 
-                 <div id= "message_area">
+                 <div id= "message_area"> </div>
+                 <div id= "note">
                    <p> Note: This database will not save to the database. The database server is currently inactive. (This page is using google maps places api, typescript and bootstrap) </p>
                  </div>
-         </form>
+         
        </div>
      </div>
    </div>
