@@ -4,10 +4,10 @@
     header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
     exit();
 }
+include("config.php");
+session_start();
 
- 	require_once("config.php");
-	require_once("session.php");
-   session_start();
+
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form
