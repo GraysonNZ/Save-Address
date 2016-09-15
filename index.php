@@ -1,7 +1,8 @@
 <?php
-include('header.php');
+header ('Location: home.php');
+//include('header.php');
 ?>
-
+<!--
 <div class="container">
 <div class="bg"></div>
 <div class="jumbotron">
@@ -18,3 +19,4 @@ include('header.php');
 
 </body>
 </html>
+-->

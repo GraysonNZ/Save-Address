@@ -7,7 +7,8 @@ var GetAddress = (function () {
         this.country = country;
     }
     GetAddress.prototype.fullAddress = function () {
-        return this.streetNumber + " " + this.StreetName + ", " + this.suburb + ", " + this.city + ", " + this.country;
+        return "The address is : " + this.streetNumber + " " + this.StreetName + ", " + this.suburb + ", " + this.city + ", " + this.country;
     };
     return GetAddress;
 }());
+;

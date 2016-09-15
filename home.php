@@ -19,7 +19,7 @@ include ('header.php'); ?>
                  var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
                  console.log("The address of " + name + " is " +  getAddress.fullAddress());
 
-                 document.getElementById('message_area').innerHTML ="The address of " + name + " is " +  getAddress.fullAddress();
+                 document.getElementById('message_area').innerHTML=  name + ": " +  getAddress.fullAddress();
                   return false;
               }
                </script>
