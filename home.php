@@ -9,7 +9,7 @@
 
          <body>
              <div class = "panel-body">
-         <form id= "create_journey" role= "form" action="">
+         <form id= "create_journey" role= "form">
              <div class="row">
                      <div class="col-md-3 col-sm-3 col-xs-3">
              <div class= "form-group">
@@ -18,7 +18,7 @@
               </div>
                </div>
                  </div>
-            
+
                  <div class="row">
                      <div class="col-md-3 col-sm-3 col-xs-3">
                    <div class= "form-group">
@@ -57,17 +57,16 @@
 
 
        </script>
-       <script src = "../typescript.ts"></script>
+       <script src = "../typescript.js"></script>
        <script>
        function ButtonClick(){
          var streetNum = document.getElementByName('street_number').value;
          var streetAdd = document.getElementByName('route').value;
          var sub= document.getElementByName('sublocality').value;
-         var city= document.getElementByName('administrative_area_level_1').value;
-         var country= document.getElementByName('country').value;
-
-        var fullAddress= new FullAddress(streetNum, streetAdd , sub, city, country);
-        console.log( getFullAddress());
+         var City= document.getElementByName('administrative_area_level_1').value;
+         var Country= document.getElementByName('country').value;
+         var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
+         document.body.innerHTML = getAddress.fullAddress();
 
       }
        </script>
