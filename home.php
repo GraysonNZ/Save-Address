@@ -47,14 +47,14 @@
        <div id="data" >
        <form>
            <fieldset>
-       <input type= "text" name="lat">
-       <input type= "text" name="lng">
-       <input type= "text" name="street_number">
-       <input type= "text" name="route">
-       <input type= "text" name="sublocality">
-       <input type= "text" name="administrative_area_level_1">
-       <input type= "text" name="postal_code">
-       <input type= "text" name="country">
+       <input type= "text" name="lat" id="lat">
+       <input type= "text" name="lng" id="lng">
+       <input type= "text" name="street_number" id="street_number">
+       <input type= "text" name="route" id="route">
+       <input type= "text" name="sublocality" id= "sublocality">
+       <input type= "text" name="administrative_area_level_1" id="administrative_area_level_1">
+       <input type= "text" name="postal_code" id="postal_code">
+       <input type= "text" name="country" id="country">
        <input type="submit" onclick="ButtonClick()" value ="Create Journey"
        class="btn btn-info btn-block">
            </fieldset>
@@ -76,11 +76,11 @@
        <script src = "../typescript.js"></script>
        <script>
        function ButtonClick(){
-         var streetNum = document.getElementByName('street_number').value;
-         var streetAdd = document.getElementByName('route').value;
-         var sub= document.getElementByName('sublocality').value;
-         var City= document.getElementByName('administrative_area_level_1').value;
-         var Country= document.getElementByName('country').value;
+         var streetNum = document.getElementById('street_number').value;
+         var streetAdd = document.getElementById('route').value;
+         var sub= document.getElementById('sublocality').value;
+         var City= document.getElementById('administrative_area_level_1').value;
+         var Country= document.getElementById('country').value;
          var getAddress = new GetAddress(streetNum, streetAdd, sub, City, Country);
          document.body.innerHTML = getAddress.fullAddress();
 
