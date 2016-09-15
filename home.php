@@ -1,3 +1,5 @@
+<?php
+include ('header.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -47,16 +49,14 @@
        <div id="data" >
        <form>
            <fieldset>
-       <input type= "text" name="lat" id="lat">
-       <input type= "text" name="lng" id="lng">
-       <input type= "text" name="street_number" id="street_number">
-       <input type= "text" name="route" id="route">
-       <input type= "text" name="sublocality" id= "sublocality">
-       <input type= "text" name="administrative_area_level_1" id="administrative_area_level_1">
-       <input type= "text" name="postal_code" id="postal_code">
-       <input type= "text" name="country" id="country">
-       <input type="submit" onclick="ButtonClick()" value ="Create Journey"
-       class="btn btn-info btn-block">
+       <input type= "hidden" name="lat" id="lat">
+       <input type= "hidden" name="lng" id="lng">
+       <input type= "hidden" name="street_number" id="street_number">
+       <input type= "hidden" name="route" id="route">
+       <input type= "hidden" name="sublocality" id= "sublocality">
+       <input type= "hidden" name="administrative_area_level_1" id="administrative_area_level_1">
+       <input type= "hidden" name="postal_code" id="postal_code">
+       <input type= "hidden" name="country" id="country">
            </fieldset>
        </form>
        </div>
