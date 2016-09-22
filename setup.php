@@ -1,6 +1,6 @@
 <?php
 
-	include('config.php');
+	require_once('config.php');
 
 	 if($_SERVER["REQUEST_METHOD"]== "POST"){
 
@@ -8,17 +8,22 @@
       	$uid =$_POST['UID_name'];
       	$pwd =$_POST['password'];
 	  	  $database=$_POST['database'];
-        $server=$_POST['servername'];
-        isset($uid && $pwd && $database && $server){
-          $connectioninfo["UID"]=$uid;
-          $connectioninfo["pwd"]=$pwd;
-          $connectioninfo["database"]=$database;
-          $serverName=$server;
+        $server=$_POST['server'];
+				if (isset($uid) && isset($pwd) || isset($database) || isset($server) ){
+				$fp=fopen('config.php','w');
+				fwrite($fp, '<?php
+				$connectionInfo = array("UID" => "'.$uid.'", "pwd" => "'. $pwd. '", "Database" => "'.$database.'", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+				$serverName = "'.$server.'";
+				$conn = sqlsrv_connect($serverName, $connectionInfo);
+				?>');
+				fclose($fp);
+				header('location: create_table.php');
         }
         else {
           $message="Please fill all the fields";
         }
     }
+		?>
     <!DOCTYPE html>
     <head>
     <title>Database Setup</title>
@@ -31,7 +36,7 @@
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
-			    		<h3 class="panel-title">Please sign up to save address</h3>
+			    		<h3 class="panel-title">Please set up the database first.</h3>
 			 			</div>
 			 			<div class="panel-body">
 			    		<form id= "register" role="form" action="" method="post">

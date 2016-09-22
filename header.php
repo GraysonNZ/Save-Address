@@ -5,13 +5,14 @@
     header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
     exit();
 }
-//   require_once('session.php');
+require_once('session.php');
  ?>
 <!DOCTYPE html>
 <head>
 <title>Save Address</title>
 <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="../bootstrap/dist/js/bootstrap.min.js"/>
+<script src="../bootstrap/dist/js/bootstrap.min.js">
+</script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
