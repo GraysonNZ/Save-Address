@@ -56,6 +56,7 @@ include ('header.php'); ?>
          </div>
          <div id= "message_area"> </div>
          <div id= "note">
+           <hr>
            <p> Note: This database will not save to the database. The database server is currently inactive. (This page is using google maps places api, typescript and bootstrap) </p>
          </div>
 
